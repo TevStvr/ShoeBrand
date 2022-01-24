@@ -1,0 +1,351 @@
+body {
+  background: whitesmoke;
+  margin: 1.5em;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.toggle svg {
+  position: absolute;
+  left: 50%;
+  top: 1.75em;
+  height: 20px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.toggle::before {
+  content: "Dark/Light";
+  font-size: xx-small;
+  background-color: transparent;
+  color: black;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 1em;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.hero-img {
+  background-image: url("../images/Shoe1.jpg");
+  background-size: cover;
+  background-position-x: 20%;
+  background-position-y: 20%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 90vh;
+  z-index: -1;
+  -webkit-animation: introLoad 2s forwards;
+          animation: introLoad 2s forwards;
+}
+
+.logo {
+  color: #595757;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #8a688a;
+}
+
+nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: rgba(138, 104, 138, 0.72);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  height: 100vh;
+  width: 50%;
+  z-index: 998;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  color: #595757;
+  border-radius: 1em;
+}
+
+nav .close {
+  float: right;
+  margin: 1em;
+  width: 2em;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 4em;
+}
+
+nav ul a {
+  color: white;
+  padding: 0.75em 2em;
+  display: block;
+}
+
+nav ul a:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+nav ul .menu {
+  width: 1em;
+  margin-top: -0.6em;
+  cursor: pointer;
+  opacity: 100%;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hero {
+  height: 65vh;
+  width: 75%;
+  -webkit-animation: moveDown 1.2s ease-in-out forwards;
+          animation: moveDown 1.2s ease-in-out forwards;
+}
+
+.hero h1 {
+  margin-top: 2em;
+  font-size: 3rem;
+  color: #8a688a;
+}
+
+.hero svg {
+  margin-top: 0.5em;
+  animation: moveArrow 2s alternate-reverse infinite;
+}
+
+.features {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.features img {
+  width: 100%;
+  height: 15em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.features .titles {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.features .one {
+  color: #7aad96;
+}
+
+.features .two {
+  color: darkgray;
+}
+
+.features .three {
+  color: #924a4a;
+}
+
+.open-nav {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.close-menu {
+  opacity: 0;
+}
+
+.dark-mode {
+  background: black;
+  color: white;
+}
+
+@media only screen and (min-width: 680px) {
+  body {
+    background: whitesmoke;
+    margin: 1.5em 5em;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+.features {
+  margin-top: 5em;
+}
+
+@media only screen and (min-width: 920px) {
+  .wrapper {
+    width: 920px;
+    margin: 0 auto;
+  }
+  .menu {
+    display: none;
+  }
+  .hero-img {
+    left: unset;
+    right: 0;
+    width: 50%;
+    height: 35em;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  nav {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  nav .close {
+    display: none;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+  }
+  nav ul a {
+    color: black;
+    display: block;
+    padding: 0em 1.5em;
+  }
+  .hero {
+    height: auto;
+    width: 45%;
+    margin-bottom: 9em;
+  }
+  .hero svg {
+    position: unset;
+    height: auto;
+    width: 5%;
+  }
+  .feature-info {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    gap: 2em;
+    margin-bottom: 8em;
+  }
+  .feature-info img {
+    height: 25em;
+    width: 30em;
+  }
+  .feature-info .content {
+    text-align: right;
+    width: 25em;
+  }
+  .left {
+        grid-template-areas: "left right";
+  }
+  .left .content {
+    text-align: left;
+  }
+  .left img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: left;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .wrapper {
+    width: 1180px;
+    margin: 0 auto;
+  }
+}
+
+@-webkit-keyframes introLoad {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes introLoad {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@-webkit-keyframes moveArrow {
+  from {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes moveArrow {
+  from {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes moveDown {
+  from {
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 100%;
+  }
+}
+
+@keyframes moveDown {
+  from {
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 100%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
