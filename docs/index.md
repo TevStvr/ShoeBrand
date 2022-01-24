@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <style>
-      body {
+body {
   background: whitesmoke;
   margin: 1.5em;
   font-family: "Poppins", sans-serif;
